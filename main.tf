@@ -16,7 +16,7 @@ provider "aws" {
 
 resource "aws_key_pair" "ssh-key" {
   key_name   = "minecraft_key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDxXRxybIXOGPAh1UyD3QvDONpDgDXB8KIdjUnnXFASHoUlopGJ2duo9zmSWOhryG4QKC6X3kItyKj2N7g8tQziZqhPFbAZkGC/zcjIeJV5uWEitvOp6PKrscNAqxlfRDwMhajBvILEYEeRMD+iSh7Dc0zdPinFOZRqqTbnAhaIc4ZMKbQE58psK+ymaytvzm/CeLYUkieg0b3JNqen9hAyjkCNspBCthj2NQ/ZpjZ0u4Jz+ioguHAbRoyZY3Yms5zzCQQKLkMQ16xtps9T4PvsGP75pBlYO0ym0eFwJelToDD0RWagLwQpX68gcsZe5qDX4i626yQQArYFdUYcJZrNfpkCxLHrp0RgdOP7qC83Gb8K5L4bg1mLzpP/FPCdLIvvJ6NgX9Vu5gtYxr3cBFmqxOVaS7NEOqHzJ9z9cNthOaLHRnQj3ynIEKKaWAZn2a9P4az02/2Z47XCTBZ4w04BEORb13sFnff+gywzzSf/QYpjoXb3T8KwfHBzeFixxxc= antoniagaete@Antonias-MacBook-Pro-2.local"
+  public_key = "ssh-rsa..."
 }
 
 resource "aws_security_group" "minecraft-server" {
