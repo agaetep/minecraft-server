@@ -1,21 +1,31 @@
 ---
-- name: Install Minecraft Server
+- name: Install Java and Minecraft Server
   hosts: instances
 
   tasks:
     - name: Update and upgrade apt
+      become: true
       apt:
         update_cache: true
         upgrade: true
 
     - name: Install java
+      become: true
       apt:
         name: default-jre
         state: present
 
+    - name: Create server directory
+      file: 
+        path: minecraft_server
+        state: directory
+
     - name: Download server
       get_url:
         url: https://piston-data.mojang.com/v1/objects/145ff0858209bcfc164859ba735d4199aafa1eea/server.jar
-    
-    - name: Install server
-      command: java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.6.jar nogui
+        dest: minecraft_server
+
+    - name: Extract server
+      command: java -Xmx1024M -Xms1024M -jar server.jar nogui
+      args:
+        chdir: minecraft_server

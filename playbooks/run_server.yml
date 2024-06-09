@@ -1,0 +1,16 @@
+---
+- name: Auto Start Minecraft Server
+  hosts: instances
+
+  tasks:
+    - name: Create auto start service file for server
+      become: true
+      template:
+        src: ../templates/minecraft.service.j2
+        dest: /etc/systemd/system/minecraft.service
+      
+    - name: Start minecraft server service
+      become: true
+      systemd:
+        name: minecraft
+        state: started

@@ -1,0 +1,10 @@
+    [Unit]
+    Description=Start Minecraft Server
+    After=network.target
+
+    [Service]
+    ExecStart=java -Xmx1024M -Xms1024M -jar server.jar nogui
+    WorkingDirectory=/home/ubuntu/minecraft_server
+
+    [Install]
+    WantedBy=multi-user.target
