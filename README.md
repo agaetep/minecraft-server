@@ -1,4 +1,4 @@
-CS 312 Course Project Part 2
+# CS 312 Course Project Part 2
 
 This repository sets up a Java Minecraft Server using an AWS EC2 instance. 
 The instance is created and configured using Terraform.
